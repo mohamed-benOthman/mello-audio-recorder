@@ -368,7 +368,7 @@ export default class AudioReactRecorder extends React.Component {
     const { canvasWidth, canvasHeight } = this.props
 
     return (
-      <div className='audio-react-recorder' style={{borderRadius : '0.625rem'}}>
+      <div className='audio-react-recorder' style={{borderRadius : '0.625rem', width: '100%', display : 'flex', justifyContent: 'center', backgroundColor : '#f5f8fa'}}>
         <canvas
           style={{borderRadius : '0.625rem'}}
           ref={this.canvasRef}
