@@ -36,8 +36,8 @@ export default class AudioReactRecorder extends React.Component {
   static defaultProps = {
     state: RecordState.NONE,
     type: 'audio/wav',
-    backgroundColor: 'rgb(0, 0, 0)',
-    foregroundColor: 'rgb(0, 0, 0)',
+    backgroundColor: '#f5f8fa',
+    foregroundColor: '#e11276',
     canvasWidth: 500,
     canvasHeight: 300
   }
@@ -367,7 +367,7 @@ export default class AudioReactRecorder extends React.Component {
     const { canvasWidth, canvasHeight } = this.props
 
     return (
-      <div className='audio-react-recorder'>
+      <div className='audio-react-recorder' style={{borderRadius : '0.625rem'}}>
         <canvas
           ref={this.canvasRef}
           width={canvasWidth}
