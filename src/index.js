@@ -209,7 +209,7 @@ export default class AudioReactRecorder extends React.Component {
     const { backgroundColor, foregroundColor } = this.props
     if (this.canvas){
       this.canvas.style.width ='100%';
-      this.canvas.height = canvas.offsetHeight;
+      this.canvas.width  = this.canvas.offsetWidth;
       this.WIDTH = this.canvas.width
       this.HEIGHT = this.canvas.height
       this.CENTERX = this.canvas.width / 2
