@@ -207,16 +207,15 @@ export default class AudioReactRecorder extends React.Component {
 
   visualize = () => {
     const { backgroundColor, foregroundColor } = this.props
-    this.canvas.style.width ='100%';
-    this.canvas.height = canvas.offsetHeight;
-    
-    this.WIDTH = this.canvas.width
-    this.HEIGHT = this.canvas.height
-    this.CENTERX = this.canvas.width / 2
-    this.CENTERY = this.canvas.height / 2
+    if (this.canvas){
+      this.canvas.style.width ='100%';
+      this.canvas.height = canvas.offsetHeight;
+      this.WIDTH = this.canvas.width
+      this.HEIGHT = this.canvas.height
+      this.CENTERX = this.canvas.width / 2
+      this.CENTERY = this.canvas.height / 2
 
-
-    if (!this.analyser) return
+      if (!this.analyser) return
 
     this.analyser.fftSize = 2048
     const bufferLength = this.analyser.fftSize
@@ -261,6 +260,11 @@ export default class AudioReactRecorder extends React.Component {
     }
 
     draw()
+    }
+
+
+
+    
   }
 
   setupMic = async () => {
