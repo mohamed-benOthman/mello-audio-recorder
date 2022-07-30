@@ -36,7 +36,7 @@ export default class AudioReactRecorder extends React.Component {
   static defaultProps = {
     state: RecordState.NONE,
     type: 'audio/wav',
-    backgroundColor: 'rgb(200, 200, 200)',
+    backgroundColor: 'rgb(0, 0, 0)',
     foregroundColor: 'rgb(0, 0, 0)',
     canvasWidth: 500,
     canvasHeight: 300
