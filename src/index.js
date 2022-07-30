@@ -29,7 +29,7 @@ export default class AudioReactRecorder extends React.Component {
     foregroundColor: PropTypes.string,
     canvasWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     canvasHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-    borderRadius : PropTypes.string
+    borderRadius : PropTypes.string,
 
     //method calls
     onStop: PropTypes.func
