@@ -29,6 +29,7 @@ export default class AudioReactRecorder extends React.Component {
     foregroundColor: PropTypes.string,
     canvasWidth: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
     canvasHeight: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    borderRadius : PropTypes.string
 
     //method calls
     onStop: PropTypes.func
@@ -38,8 +39,9 @@ export default class AudioReactRecorder extends React.Component {
     type: 'audio/wav',
     backgroundColor: '#f5f8fa',
     foregroundColor: '#e11276',
-    canvasWidth: 500,
-    canvasHeight: 300
+    canvasWidth: '100%',
+    canvasHeight: 300,
+    borderRadius : '0%',
   }
 
   //2 - mount
@@ -233,6 +235,7 @@ export default class AudioReactRecorder extends React.Component {
 
       self.canvasCtx.lineWidth = 2
       self.canvasCtx.strokeStyle = foregroundColor
+      self.canvasCtx.boder
 
       self.canvasCtx.beginPath()
 
@@ -364,11 +367,12 @@ export default class AudioReactRecorder extends React.Component {
 
   //1 - render
   render() {
-    const { canvasWidth, canvasHeight } = this.props
+    const { canvasWidth, canvasHeight, borderRadius } = this.props
 
     return (
       <div className='audio-react-recorder' style={{borderRadius : '0.625rem'}}>
         <canvas
+          style={borderRadius}
           ref={this.canvasRef}
           width={canvasWidth}
           height={canvasHeight}
